@@ -1,0 +1,28 @@
+<!-- | uppercase is a PIPE example -->
+<h2 class="animated fadeIn">{{ heroe.nombre | uppercase }} <small>({{ heroe.aparicion | date: 'y' }})</small></h2>
+<hr>
+<div class="row">
+
+  <div class="col-md-4 animated fadeIn fast">
+    <img [src]="heroe.img" class="img-fluid" [alt]="heroe.nombre">
+    <br><br>
+
+    <a [routerLink]="['/heroes']" class="btn btn-outline-primary btn-block"><- Back to Heroes</a>
+
+  </div>
+
+  <div class="col-md-8">
+    <h3>{{ heroe.nombre }}</h3>
+    <hr>
+    <p>{{ heroe.bio }}</p>
+    <div class="casa">
+      <br>
+      <h5>Casa</h5>
+      <img [src]="casaURL" class="casa-img {{ casaURL }}" alt="Foto {{ casaURL }} ">
+      <!-- Versión del profesor -->
+        <!-- img *ngIf="heroe.casa == 'DC'" class="casa-img" src="assets/img/dc-logo.png" alt="DC">
+        <img *ngIf="heroe.casa == 'Marvel'" class="casa-img" src="assets/img/marvel-logo.png" alt="Marvel"-->
+      <!-- Versión del profesor -->
+    </div>
+  </div>
+</div>

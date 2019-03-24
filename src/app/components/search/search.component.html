@@ -1,0 +1,15 @@
+<h2>Heroes <small>Marvel & DC</small></h2>
+<h4>These are the results for '<b>{{ term }}</b>'</h4>
+<hr>
+
+<div class="row" *ngIf="heroes.length == 0">
+  <div class="col-md-12">
+    <div class="alert alert-info animated fadeIn fast" role="alert">
+      No results found with term: {{ term }}
+    </div>
+  </div>
+</div>
+
+<div class="card-columns">
+  <app-heroe-card [heroe]="heroe" [index]="heroe.idx" *ngFor="let heroe of heroes; let i = index"></app-heroe-card>
+</div>
